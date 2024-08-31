@@ -27,6 +27,7 @@ async function bootstrap() {
     },
   );
   await app.startAllMicroservices();
+  logger.log('HealthCheck Added');
   logger.log(`Payments Mircroservice  Running in the port: ${envs.port}`);
   await app.listen(envs.port);
 }
